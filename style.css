@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+main {}
+
+input, select, button {
+  appearance: none;
+  -moz-appearance: none;
+}
+
+.newTask input {
+  width: 50%;
+  line-height: 50px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.datePicker {}
+
+.datePicker input[type=date] {
+  font-size: 1.5rem;
+  line-height: 50px;
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.datePicker p {}
+
+.datePicker img {
+  width: 50px;
+}
+
+.category select {
+  width: 50%;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.save input {
+  width: 3rem;
+  margin: 20px;
+}
+
+.container li {
+  background-color: orange;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.container li p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container ul {
+  text-align: left;
+  list-style: none;
+}
+
+.container li #removeButton {
+  background: red;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.table {
+  background-color: darkorange;
+  border-radius: 10px;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.table thead {
+  background-color: orange;
+}
+
+footer {}

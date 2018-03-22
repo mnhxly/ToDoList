@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>TO DO LIST</title>
+</head>
+
+<body>
+  <header>
+    <h1>Your To-Do-List</h1>
+  </header>
+  <main>
+    <div class="newTask">
+      <input type="text" id="newTask" name="" value="" placeholder="Please enter your new task">
+    </div>
+
+    <div class="datePicker">
+
+      <input type="date" id="dateChooser" name="" value="">
+    </div>
+
+    <div class="category">
+      <select id="todoCategory">
+      <option value=" 0 " disabled selected hidden>Select your category</option>
+      <option value="privat ">Privat</option>
+      <option value="Work ">Work</option>
+      <option value="School ">School</option>
+    </select>
+    </div>
+    <div class="save ">
+      <input type="image" id="myimage" src="save-icon.png" onclick="saveToDo()" />
+    </div>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Kategorie</td>
+            <td>Date</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <!--    <ul class="todoList" id="todoList">
+
+  </ul>-->
+
+    </div>
+
+  </main>
+  <footer>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
