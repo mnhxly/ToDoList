@@ -1,5 +1,3 @@
-
-
 body {
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -11,13 +9,13 @@ header {
 
 main {}
 
-input, select, button {
+input, select, button, table {
   appearance: none;
   -moz-appearance: none;
+  width: 75%;
 }
 
 .newTask input {
-  width: 50%;
   line-height: 50px;
   font-size: 1.5rem;
   border-radius: 10px;
@@ -28,20 +26,13 @@ input, select, button {
 
 .datePicker input[type=date] {
   font-size: 1.5rem;
-  line-height: 50px;
-  width: 50%;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .datePicker p {}
 
-.datePicker img {
-  width: 50px;
-}
-
 .category select {
-  width: 50%;
   height: 50px;
   font-size: 1.5rem;
   border-radius: 10px;
@@ -86,7 +77,6 @@ input, select, button {
   background-color: darkorange;
   border-radius: 10px;
   justify-content: center;
-  width: 50%;
   margin: auto;
   height: 50px;
   font-size: 1.5rem;
