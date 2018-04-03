@@ -47,3 +47,21 @@
 
     return btn;
   }
+
+  function loadStorageToTable() {
+    var hst = document.getElementById("highscores");
+
+var highScores = [
+    {name: "Maximillian", score: 1000},
+    {name: "The second guy", score: 700},
+    {name: "The newbie", score: 50},
+];
+
+localStorage.setItem("highscores", JSON.stringify(highScores));
+
+var retrievedScores = JSON.parse(localStorage.getItem("highscores"));
+
+for (var i = 0; i < retrievedScores.length; i++) {
+    hst.innerHTML += "<tr><td>" + retrievedScores[i].name + "</td><td>" + retrievedScores[i].score + "</td></tr>";
+}
+  }
