@@ -2,10 +2,16 @@
 
   function saveToDo() {
     var tableBodyRef = document.getElementById('tableBody');
-    var task = document.getElementById('newTask').value;
-    var category = document.getElementById('todoCategory').value;
-    var date = document.getElementById('dateChooser').value;
+    var taskInput = document.getElementById('newTask').value;
+    var categoryInput = document.getElementById('todoCategory').value;
+    var dateInput = document.getElementById('dateChooser').value;
     if (task && category != 0 && date) {
+
+      //Save Input to localStorage
+      var Inputs = [
+          {task: taskInput, date: dateInput, category: categoryInput},
+      ];
+      localStorage.setItem("TableData", JSON.stringify(Inputs));
 
       // Insert a row in the table at the last row
       var newRow = tableBodyRef.insertRow(0);
