@@ -8,7 +8,7 @@
   <title>TO DO LIST</title>
 </head>
 
-<body onload="loadStorageToTable">
+<body>
   <header>
     <h1>Your To-Do-List</h1>
   </header>
@@ -31,33 +31,18 @@
     </select>
     </div>
     <div class="save ">
-      <input type="image" id="myimage" src="Icons/save-icon.png" onclick="saveToDo()" />
+      <input type="image" id="myimage" src="Icons/save-icon.png" onclick="newElement()" />
     </div>
     <div class="container">
-      <table class="table" id="tabelToDo">
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Kategorie</td>
-            <td>Date</td>
-            <td></td>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-          <tr>
-            <td>Go buying two avocado</td>
-            <td>Eating</td>
-            <td>22.03.2018</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <!--    <ul class="todoList" id="todoList">
-
-  </ul>-->
-
+      <ul class="list" id="toDoList">
+        <li>
+          <span>Name</span>
+          <span>category</span>
+          <span>date</span>
+          <span></span>
+        </li>
+      </ul>
     </div>
-
   </main>
   <footer>
   </footer>

@@ -55,3 +55,43 @@
           createCheckButton() + "</td></tr>";
       }
     }
+
+    // Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var taskInput = document.getElementById('newTask').value;
+  var categoryInput = document.getElementById('todoCategory').value;
+  var dateInput = document.getElementById('dateChooser').value;
+
+  var taskTextNode = document.createTextNode(taskInput);
+  var categoryTextNode = document.createTextNode(categoryInput);
+  var dateTextNode = document.createTextNode(dateInput);
+
+  li.appendChild(taskTextNode);
+  li.appendChild(categoryTextNode);
+  li.appendChild(dateTextNode);
+
+  if (taskInput && categoryInput != 0) {
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+    document.getElementById("toDoList").appendChild(li);
+  } else {
+    alert("Please fill out everything!")
+  }
+
+
+  document.getElementById("myInput").value = "";
+
+
+}
