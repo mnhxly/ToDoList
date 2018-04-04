@@ -36,7 +36,7 @@
       var btn = document.createElement('input');
       btn.type = "image";
       btn.className = "btn";
-      btn.src = "CheckIcon.png";
+      btn.src = "Icons/CheckIcon.png";
       //btn.onclick = checkItem();
 
       return btn;
