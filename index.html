@@ -8,7 +8,7 @@
   <title>TO DO LIST</title>
 </head>
 
-<body onload="loadStorageToTable">
+<body>
   <header>
     <h1>Your To-Do-List</h1>
   </header>
@@ -16,12 +16,9 @@
     <div class="newTask">
       <input type="text" id="newTask" name="" value="" placeholder="Please enter your new task">
     </div>
-
     <div class="datePicker">
-
       <input type="date" id="dateChooser" name="" value="">
     </div>
-
     <div class="category">
       <select id="todoCategory">
       <option value=" 0 " disabled selected hidden>Select your category</option>
@@ -37,27 +34,16 @@
       <table class="table" id="tabelToDo">
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Kategorie</td>
+            <td>Task</td>
+            <td>Category</td>
             <td>Date</td>
             <td></td>
           </tr>
         </thead>
         <tbody id="tableBody">
-          <tr>
-            <td>Go buying two avocado</td>
-            <td>Eating</td>
-            <td>22.03.2018</td>
-            <td></td>
-          </tr>
         </tbody>
       </table>
-      <!--    <ul class="todoList" id="todoList">
-
-  </ul>-->
-
     </div>
-
   </main>
   <footer>
   </footer>

@@ -1,2 +1,2 @@
 # ToDoList
-A simple todo-list.
+A simple todo-list from Malte Hönicke.
