@@ -9,7 +9,7 @@ header {
 
 main {}
 
-input, select, button, table {
+input, select, button, ul {
   appearance: none;
   -moz-appearance: none;
   width: 75%;
@@ -44,6 +44,10 @@ input, select, button, table {
   margin: 20px;
 }
 
+.container ul {
+  display: inline;
+}
+
 .container li {
   background-color: orange;
   border-radius: 10px;
@@ -54,33 +58,23 @@ input, select, button, table {
   grid-template-columns: repeat(4, 25%);
 }
 
+.header {
+  font-weight: bold;
+}
+
 .container li p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.container li #removeButton {
-  background: red;
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.table, .list {
-  background-color: darkorange;
-  border-radius: 10px;
-  justify-content: center;
-  margin: auto;
-  height: 50px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .table thead {
   background-color: orange;
+}
+
+.close {
+  font-size: 20;
+  cursor: pointer;
 }
 
 footer {}

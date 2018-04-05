@@ -4,62 +4,10 @@
     loadList();
   }
 
-  function saveToDo() {
-
-    var tableBodyRef = document.getElementById('tableBody');
-    var taskInput = document.getElementById('newTask').value;
-    var categoryInput = document.getElementById('todoCategory').value;
-    var dateInput = document.getElementById('dateChooser').value;
-    if (taskInput && categoryInput != 0) {
-
-      // Insert a row in the table at the last row
-      var newRow = tableBodyRef.insertRow(0);
-
-      // Insert a cell in the row at index 0
-      var newCellName = newRow.insertCell(0);
-      var newCellCategory = newRow.insertCell(1);
-      var newCellDate = newRow.insertCell(2);
-      var newCellDelete = newRow.insertCell(3);
-
-      //Insert the Fiels Values into the Table Cells
-      newCellName.appendChild(document.createTextNode(taskInput));
-      newCellCategory.appendChild(document.createTextNode(categoryInput));
-      newCellDate.appendChild(document.createTextNode(dateInput));
-      newCellDelete.appendChild(createCheckButton());
-
-      //Clear all the Input Fields
-      document.getElementById("newTask").value = "";
-      document.getElementById("todoCategory").value = "";
-      document.getElementById("dateChooser").value = "";
-
-      saveList();
-    } else {
-      alert("Please fill out everything!")
-    }
-  }
-
-  function checkItem() {
-    var div = this.parentElement;
-    div.style.display = "none";
-    //var tRow = this.parentNode.parentNode;
-    //var parent = tRow.parentNode;
-
-    console.log("checked");
-  }
-
-  function createCheckButton() {
-    var btn = document.createElement('input');
-    btn.type = "image";
-    btn.className = "btn";
-    btn.src = "Icons/CheckIcon.png";
-    //btn.onclick = checkItem();
-
-    return btn;
-  }
 
   function saveList() {
     // Get the HTML contents of the list...
-    var html = tabelToDo.innerHTML;
+    var html = toDoList.innerHTML;
 
     // Write the HTML to local storage...
     localStorage.setItem("tableHTML", html);
@@ -69,11 +17,67 @@
     // Read the saved HTML from local storage...
     var html = localStorage.getItem("tableHTML");
     if (html)
-      tabelToDo.innerHTML = html;
+      toDoList.innerHTML = html;
   }
 
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+
+    var taskSpan = document.createElement("SPAN");
+    var categorySpan = document.createElement("SPAN");
+    var dateSpan = document.createElement("SPAN");
+
+    var taskInput = document.getElementById('newTask').value;
+    var categoryInput = document.getElementById('todoCategory').value;
+    var dateInput = document.getElementById('dateChooser').value;
+
+    var taskTextNode = document.createTextNode(taskInput);
+    var categoryTextNode = document.createTextNode(categoryInput);
+    var dateTextNode = document.createTextNode(dateInput);
+
+
+    taskSpan.appendChild(taskTextNode);
+    categorySpan.appendChild(categoryTextNode);
+    dateSpan.appendChild(dateTextNode);
+
+    li.appendChild(taskSpan);
+    li.appendChild(categorySpan);
+    li.appendChild(dateSpan);
+
+    if (taskInput && categoryInput != 0) {
+
+      document.getElementById("toDoList").appendChild(li);
+
+      var checkSpan = document.createElement("SPAN");
+      var check = document.createTextNode("\u2713");
+      checkSpan.className = "close";
+      checkSpan.appendChild(check);
+      li.appendChild(checkSpan);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+
+      saveList();
+
+      //Clear all the Input Fields
+      document.getElementById("newTask").value = "";
+      document.getElementById("todoCategory").value = "0";
+      document.getElementById("dateChooser").value = "";
+    } else {
+      alert("Please fill out everything!")
+
+    }
+  }
+
+
+
   // Click on a close button to hide the current list item
-  var close = document.getElementsByClassName("btn");
+  var close = document.getElementsByClassName("close");
   var i;
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -81,3 +85,8 @@
       div.style.display = "none";
     }
   }
+
+
+
+
+  //
