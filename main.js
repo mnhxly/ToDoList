@@ -51,8 +51,8 @@
     var btn = document.createElement('input');
     btn.type = "image";
     btn.className = "btn";
-    btn.src = "CheckIcon.svg";
-    btn.onclick = checkItem();
+    btn.src = "Icons/CheckIcon.png";
+    //btn.onclick = checkItem();
 
     return btn;
   }

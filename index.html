@@ -28,21 +28,17 @@
     </select>
     </div>
     <div class="save ">
-      <input type="image" id="myimage" src="save-icon.png" onclick="saveToDo()" />
+      <input type="image" id="myimage" src="Icons/save-icon.png" onclick="newElement()" />
     </div>
     <div class="container">
-      <table class="table" id="tabelToDo">
-        <thead>
-          <tr>
-            <td>Task</td>
-            <td>Category</td>
-            <td>Date</td>
-            <td></td>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
-      </table>
+      <ul class="list" id="toDoList">
+        <li>
+          <span>Name</span>
+          <span>category</span>
+          <span>date</span>
+          <span></span>
+        </li>
+      </ul>
     </div>
   </main>
   <footer>
